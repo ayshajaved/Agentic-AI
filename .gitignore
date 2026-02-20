@@ -1,0 +1,29 @@
+# ============================================================
+# .gitignore — Files to exclude from Git
+# ============================================================
+
+# Virtual environment
+venv/
+.venv/
+
+# API keys and secrets — NEVER commit this!
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Log files
+*.log
+
+# IDE settings
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS files
+.DS_Store
+Thumbs.db
