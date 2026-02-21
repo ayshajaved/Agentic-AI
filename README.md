@@ -11,7 +11,7 @@ A structured, hands-on repository to learn **Google Agent Development Kit (ADK)*
 | `03_sequential_pipeline/` | Sequential Pipelines | `SequentialAgent`, fixed linear workflows |
 | `04_parallel_agents/` | Parallel Agents | `ParallelAgent`, high-speed concurrency |
 | `05_stateful_agent/` | Stateful & Persistent | `SessionService`, JSON file persistence |
-| `06_rag_agent/` | *(coming soon)* | Retrieval-Augmented Generation |
+| `06_rag_agent/` | RAG (Retrieval) | Retrieval-Augmented Generation, Search tools |
 
 ---
 
@@ -63,6 +63,10 @@ Gather diverse data from multiple sources simultaneously for high-speed executio
 ### 05. Stateful & Persistent Agents 🧠
 Give your agent long-term memory that persists even after you restart the script.
 - **Run:** `cd 05_stateful_agent; python main.py`
+
+### 06. RAG Agent (Retrieval)
+A factual assistant that searches local documents to answer questions without hallucinating.
+- **Run:** `cd 06_rag_agent; python main.py`
 
 ---
 
