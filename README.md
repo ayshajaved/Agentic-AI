@@ -1,26 +1,26 @@
 # Agentic AI with Google ADK — Learning Repository
 
-A structured, hands-on repository to learn **Google Agent Development Kit (ADK)** from zero to multi-agent systems. Each folder is a self-contained project that builds on the previous one.
+A structured, hands-on repository to learn **Google Agent Development Kit (ADK)** from zero to multi-agent production systems. Each folder is a self-contained project that builds on the previous one.
 
-## Learning Roadmap
+## 🚀 Learning Roadmap
 
 | Folder | Topic | Concepts Covered |
 |---|---|---|
 | `01_basic_agent/` | Simple Agent + Tool | LlmAgent, Tool, Runner, Session, Events |
-| `02_multi_agent/` | *(coming soon)* | Coordinator agent, sub-agents, delegation |
-| `03_sequential_pipeline/` | *(coming soon)* | SequentialAgent, chaining multiple agents |
-| `04_parallel_agents/` | *(coming soon)* | ParallelAgent, concurrent task execution |
-| `05_stateful_agent/` | *(coming soon)* | Persistent sessions, state management |
-| `06_rag_agent/` | *(coming soon)* | Retrieval-Augmented Generation with tools |
+| `02_multi_agent/` | Multi-Agent (Delegation) | Intent-based delegation, `transfer_to_agent` |
+| `03_sequential_pipeline/` | Sequential Pipelines | `SequentialAgent`, fixed linear workflows |
+| `04_parallel_agents/` | Parallel Agents | `ParallelAgent`, high-speed concurrency |
+| `05_stateful_agent/` | Stateful & Persistent | `SessionService`, JSON file persistence |
+| `06_rag_agent/` | *(coming soon)* | Retrieval-Augmented Generation |
 
 ---
 
-## Quick Start
+## 🛠️ Quick Start
 
 ### 1. Clone the repo
 ```powershell
-git clone https://github.com/yourname/adk-learning.git
-cd adk-learning
+git clone https://github.com/ayshajaved/Agentic-AI.git
+cd Agentic-AI
 ```
 
 ### 2. Create a virtual environment
@@ -35,64 +35,50 @@ pip install google-adk python-dotenv
 ```
 
 ### 4. Set your Gemini API Key
-Get a **free key** at: https://aistudio.google.com/app/apikey
-
-Create `.env` in the **root** of this repo:
+Create a `.env` in the **root** folder:
 ```env
 GOOGLE_API_KEY=your_api_key_here
 ```
-> All sub-projects read from this single `.env` file.
 
 ---
 
-## Module 01 — Basic Agent
+## 📂 Modules Overview
 
-> **Learn:** How to build a single AI agent with a custom tool.
+### 01. Basic Agent + Tool
+Build a single agent that can fetch real-time weather using function calling (tools).
+- **Run:** `cd 01_basic_agent; python main.py`
 
-```powershell
-cd 01_basic_agent
-python main.py
-```
+### 02. Multi-Agent Delegation
+A coordinator agent that intelligently transfers tasks to specialized sub-agents.
+- **Run:** `cd 02_multi_agent; python main.py`
 
-**What you'll see:**
-```
-[OK] API Key loaded (ends with: ...xyzABC)
+### 03. Sequential Pipelines
+Create a "Production Line" where agents hand off data in a fixed order (Researcher → Writer).
+- **Run:** `cd 03_sequential_pipeline; python main.py`
 
-============================================================
-   Google ADK — Simple Weather Agent
-============================================================
+### 04. Parallel Agents
+Gather diverse data from multiple sources simultaneously for high-speed execution.
+- **Run:** `cd 04_parallel_agents; python main.py`
 
-  USER  : What's the weather like in Tokyo?
-  [TOOL] get_weather  args={'location': 'Tokyo'}
-  AGENT : The weather in Tokyo is Sunny with 28C...
-```
-
-**Files:**
-```
-01_basic_agent/
-├── agent.py   # LlmAgent definition with instruction + tools
-├── tools.py   # get_weather() — a custom tool function
-├── main.py    # Runner + Session + Event loop
-└── README.md  # Detailed explanation of this module
-```
+### 05. Stateful & Persistent Agents 🧠
+Give your agent long-term memory that persists even after you restart the script.
+- **Run:** `cd 05_stateful_agent; python main.py`
 
 ---
 
-## Core ADK Concepts (Quick Reference)
+## 🧩 Core ADK Concepts
 
-```
-Tool        → A Python function the LLM can call
-LlmAgent    → AI agent powered by Gemini; has instruction + tools
-Runner      → Orchestrator: connects agent + session + messages
-Session     → A conversation thread (user ↔ agent history)
-Event       → Every action (text, tool call, result) is an Event
-```
+- **LlmAgent**: Your AI "Brain" with instructions and tools.
+- **Tool**: Python functions the LLM can "act" through.
+- **Runner**: The engine that drives the agentic loop.
+- **SessionService**: Manages the agent's memory (RAM or Disk).
+- **Sequential/Parallel Agent**: specialized containers for complex multi-agent flows.
 
 ---
 
-## Tech Stack
+## 🚀 Tech Stack
 
-- **Google ADK** — `google-adk`
-- **Gemini 2.5 Flash** — LLM powering all agents
+- **Google ADK** (`google-adk`)
+- **Gemini 2.0 Flash** — Recommended for high-speed agentic loops.
 - **Python 3.11+**
-- **python-dotenv** — API key management
+- **dotenv** for API security.
