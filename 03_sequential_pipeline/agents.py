@@ -11,7 +11,7 @@ from tools import search_wiki
 # Its goal is to find facts using the search tool.
 research_agent = LlmAgent(
     name="researcher",
-    model=Gemini(model="gemini-2.5-flash"),
+    model=Gemini(model="models/gemini-2.0-flash"),
     description="A meticulous researcher who finds data and facts.",
     instruction=(
         "You are an expert Researcher. "
@@ -25,7 +25,7 @@ research_agent = LlmAgent(
 # Its goal is to take input (from the researcher) and turn it into a post.
 writer_agent = LlmAgent(
     name="writer",
-    model=Gemini(model="gemini-2.5-flash"),
+    model=Gemini(model="models/gemini-2.0-flash"),
     description="A creative content writer for social media.",
     instruction=(
         "You are a Creative Writer. "

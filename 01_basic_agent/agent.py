@@ -19,7 +19,7 @@ from tools import get_weather
 
 weather_agent = LlmAgent(
     name="weather_assistant",
-    model=Gemini(model="gemini-2.5-flash"),
+    model=Gemini(model="models/gemini-2.0-flash"),
     description="A weather assistant that fetches real-time weather for any city.",
     instruction=(
         "You are a friendly Weather Assistant. "

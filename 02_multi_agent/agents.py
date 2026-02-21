@@ -13,7 +13,7 @@ from tools import get_weather, convert_currency
 # 1. Specialized Weather Agent
 weather_agent = LlmAgent(
     name="weather_assistant",
-    model=Gemini(model="gemini-2.5-flash"),
+    model=Gemini(model="models/gemini-2.0-flash"),
     description="Specialist in weather forecasts and climate information.",
     instruction="You are a weather expert. Provide detailed yet concise weather information.",
     tools=[get_weather],
@@ -22,7 +22,7 @@ weather_agent = LlmAgent(
 # 2. Specialized Finance Agent
 finance_agent = LlmAgent(
     name="finance_assistant",
-    model=Gemini(model="gemini-2.5-flash"),
+    model=Gemini(model="models/gemini-2.0-flash"),
     description="Specialist in currency conversion and financial math.",
     instruction="You are a finance expert. Help users convert money accurately.",
     tools=[convert_currency],
@@ -32,7 +32,7 @@ finance_agent = LlmAgent(
 # It has sub_agents and can delegate to them when it identifies a need.
 travel_coordinator = LlmAgent(
     name="travel_coordinator",
-    model=Gemini(model="gemini-2.5-flash"),
+    model=Gemini(model="models/gemini-2.0-flash"),
     description="A master travel assistant that helps with planning and logistics.",
     instruction=(
         "You are a Travel Coordinator. Your job is to help the user with their travel plans. "
